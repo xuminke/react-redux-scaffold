@@ -27,7 +27,7 @@ module.exports = {
 
   plugins: [
     new ProgressBarPlugin(),
-    new ExtractTextPlugin('[name].css', {allChunks: true}),
+    new ExtractTextPlugin('[name].css', { allChunks: true }),
     new HtmlWebpackPlugin({
       template: './src/index.html',
       inject: 'body',
@@ -41,9 +41,9 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(js|jsx)$/, 
-        exclude: /node_modules/, 
-        loader: 'babel-loader', 
+        test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
+        loader: 'babel-loader',
       },
       {
         test: /\.css$/,
@@ -72,4 +72,4 @@ module.exports = {
       },
     ],
   },
-}
+};

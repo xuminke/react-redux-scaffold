@@ -1,12 +1,6 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Button } from 'antd';
 
-class Demo extends Component {
-  render() {
-    return (
-      <Button type="primary">Demo</Button>
-    );
-  }
-}
+const Demo = () => <Button type="primary">Demo</Button>;
 
 export default Demo;

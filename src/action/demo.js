@@ -1,3 +1,4 @@
+import { createActions } from 'redux-actions';
 import {
   FETCH_DATA_REQUEST,
   FETCH_DATA_SUCCESS,
@@ -5,7 +6,7 @@ import {
   INCREASE,
   DECREASE,
 } from '../constants/demo';
-import { createActions } from 'redux-actions';
+
 
 export const { increment, decrement } = createActions({
   INCREASE: (amount = 1) => ({ amount }),

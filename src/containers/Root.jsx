@@ -4,7 +4,7 @@ import { Provider } from 'react-redux';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import App from './App';
 import Demo from './Demo';
- 
+
 const Root = ({ store }) => (
   <Provider store={store}>
     <Router>
@@ -14,10 +14,10 @@ const Root = ({ store }) => (
       </Switch>
     </Router>
   </Provider>
-)
- 
+);
+
 Root.propTypes = {
-  store: PropTypes.object.isRequired
-}
- 
+  store: PropTypes.object.isRequired,
+};
+
 export default Root;

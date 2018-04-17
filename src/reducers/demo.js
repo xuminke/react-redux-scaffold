@@ -1,8 +1,9 @@
-import {
-  INCREASE,
-  DECREASE,
-} from '../constants/demo';
-import { handleActions, combineActions } from 'redux-actions';
+// import {
+//   INCREASE,
+//   DECREASE,
+// } from '../constants/demo';
+import { handleActions } from 'redux-actions';
+
 const defaultState = {
   counter: 10,
 };
@@ -13,7 +14,7 @@ const demoReducer = handleActions({
 
   DECREMENT: (state, action) => ({
     counter: state.counter - action.payload,
-  })
+  }),
 }, defaultState);
 
 export default demoReducer;

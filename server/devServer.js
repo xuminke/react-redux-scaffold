@@ -20,12 +20,12 @@ app.use(historyApiFallback());
 // Tell express to use the webpack-dev-middleware and use the webpack.config.js
 // configuration file as a base.
 app.use(webpackDevMiddleware(compiler, {
-  publicPath: webpackConfig.output.publicPath
+  publicPath: webpackConfig.output.publicPath,
 }));
 
 app.use(webpackHotMiddleware(compiler));
 
-app.listen(port, function (err) {
+app.listen(port, (err) => {
   if (err) {
     console.log(err);
   }
