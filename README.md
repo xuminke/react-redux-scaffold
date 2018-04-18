@@ -5,6 +5,7 @@ a scaffold with the following Libs
 3. React-Router v4
 4. Ant.Design v3
 5. Redux-Thunk
+6. Redux-Actions
 
 Dev
 1. webpack v4
