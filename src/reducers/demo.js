@@ -1,7 +1,3 @@
-// import {
-//   INCREASE,
-//   DECREASE,
-// } from '../constants/demo';
 import { handleActions } from 'redux-actions';
 
 const defaultState = {

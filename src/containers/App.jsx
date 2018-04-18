@@ -5,9 +5,14 @@ import { Link } from 'react-router-dom';
 class App extends Component {
   render() {
     return (
-      <Link to="/demo">
-        <Button type="primary">Button</Button>
-      </Link>
+      <div>
+        <Link to="/demo">
+          <Button type="primary">Button</Button>
+        </Link>
+        <Link to="/demoAsync">
+          <Button type="primary">ButtonAsync</Button>
+        </Link>
+      </div>
     );
   }
 }

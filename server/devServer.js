@@ -13,6 +13,13 @@ const compiler = webpack(webpackConfig);
 // app.get('/', function (req, res) {
 //   res.sendFile(path.join(__dirname, '../src/index.html'));
 // });
+app.get('/demoAsync/increase', function(req, res) {
+  res.status(200).json({data: 1});
+});
+
+app.get('/demoAsync/decrease', function(req, res) {
+  res.status(200).json({data: 1});
+});
 
 // fix refresh page 404
 app.use(historyApiFallback());
