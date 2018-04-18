@@ -1,8 +1,8 @@
 # react-redux-scaffold
 ## script ##
 npm start
-npm lint
-npm lint:fix
+npm run lint
+npm run lint:fix
 
 
 a scaffold with the following Libs

@@ -17,6 +17,19 @@
     "no-unused-vars": [1],
     "react/prefer-stateless-function": [1],
     "arrow-parens": [1],
+    "react/prop-types": [1],
+    "import/no-extraneous-dependencies": [0],
+    "arrow-body-style": [0],
+    "comma-dangle": [
+      "error",
+      {
+        "arrays": "ignore",
+        "objects": "ignore",
+        "imports": "ignore",
+        "exports": "ignore",
+        "functions": "ignore"
+      }
+    ],
     "jsx-a11y/anchor-is-valid": [
       "error",
       {

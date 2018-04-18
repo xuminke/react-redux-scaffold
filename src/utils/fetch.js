@@ -1,3 +1,5 @@
+import querystring from 'query-string';
+
 export function paramToQuery(url, params) {
   if (!Object.keys(params).length) {
     return url;

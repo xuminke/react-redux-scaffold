@@ -4,14 +4,14 @@ import { connect } from 'react-redux';
 import { increase, decrease } from '../action/demo';
 
 const Demo = (props) => {
-  return(
+  return (
     <div>
       <div>{props.demo && props.demo.counter}</div>
       <div><Button onClick={props.increase}><Icon type="plus-circle-o" /></Button></div>
       <div><Button onClick={props.decrease}><Icon type="minus-circle-o" /></Button></div>
     </div>
   );
-}
+};
 
 const mapStateToProps = state => {
   return {

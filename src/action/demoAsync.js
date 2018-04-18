@@ -6,7 +6,7 @@ export const increaseAsync = (params) => {
     payload: demoAsyncAPI.increaseAsync(params),
     meta: undefined,
   });
-}
+};
 
 export const decreaseAsync = (params) => {
   return dispatch => dispatch({
@@ -14,4 +14,4 @@ export const decreaseAsync = (params) => {
     payload: demoAsyncAPI.decreaseAsync(params),
     meta: undefined,
   });
-}
+};
