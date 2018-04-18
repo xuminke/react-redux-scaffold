@@ -8,12 +8,12 @@ const defaultState = {
   counter: 10,
 };
 const demoReducer = handleActions({
-  INCREMENT: (state, action) => ({
-    counter: state.counter + action.payload,
+  INCREASE: (state, action) => ({
+    counter: state.counter + action.payload.amount,
   }),
 
-  DECREMENT: (state, action) => ({
-    counter: state.counter - action.payload,
+  DECREASE: (state, action) => ({
+    counter: state.counter - action.payload.amount,
   }),
 }, defaultState);
 
