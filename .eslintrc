@@ -16,7 +16,7 @@
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
     "no-unused-vars": [1],
     "react/prefer-stateless-function": [1],
-    "arrow-parens": [1],
+    "arrow-parens": [0],
     "react/prop-types": [1],
     "import/no-extraneous-dependencies": [0],
     "arrow-body-style": [0],
