@@ -1,8 +1,12 @@
 const path = require('path');
 const webpack = require('webpack');
+const babelPolyfill = require('babel-polyfill');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ProgressBarPlugin = require('progress-bar-webpack-plugin');
+const ReplacePlugin = require('webpack-plugin-replace');
+
+const ProxyServer = 'http://10.167.223.135:8080';
 
 module.exports = {
   mode: 'development',
@@ -10,6 +14,7 @@ module.exports = {
   devtool: 'cheap-module-eval-source-map',
 
   entry: [
+    'babel-polyfill',
     'webpack-hot-middleware/client?noInfo=true&reload=true',
     path.resolve(__dirname, 'src/index.js'),
   ],
@@ -34,7 +39,15 @@ module.exports = {
     }),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.DefinePlugin({
-      ENV: JSON.stringify('development'),
+      'process.env.NODE_ENV': JSON.stringify('development'),
+    }),
+    new ReplacePlugin({
+      include: [
+        path.resolve(__dirname, 'src/constants/config.js'),
+      ],
+      values: {
+        PROXYSERVER: ProxyServer,
+      },
     }),
   ],
 

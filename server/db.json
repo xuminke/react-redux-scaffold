@@ -1,0 +1,1479 @@
+{
+  "token": {
+    "access": {
+      "token": {
+        "id": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwidXNlciI6eyJuYW1lIjoiWHVNaW5rZSIsImlkIjoiMTIzNDU2NyIsInJvbGVfbmFtZSI6ImFkbWluIiwibGV2ZWxfbmFtZSI6ImxldmVsMSJ9fQ.A9VLOHRLYEMsDno8vavZdc6p6yiay77aXQ6Grc2_V4M"
+      }
+    }
+  },
+  "increase": {
+    "data": 1
+  },
+  "decrease": {
+    "data": 1
+  },
+  "replacers": [
+    {
+      "id": "0001",
+      "name": "Eric",
+      "mail_addr": "Eric@xxxx.com",
+      "team": "SYS_1",
+      "role_name": "administrator",
+      "level": "level1",
+      "replacer_flag": true
+    },
+    {
+      "id": "0002",
+      "name": "Eric",
+      "mail_addr": "Eric@xxxx.com",
+      "team": "SYS_1",
+      "role_name": "apply",
+      "level": "level2",
+      "replacer_flag": false
+    }
+  ],
+  "users": [
+    {
+      "id": "0001",
+      "name": "XuMinke",
+      "mail_addr": "Eric@xxxx.com",
+      "team": "SYS_1",
+      "role_name": "administrator",
+      "role_id": "administrator",
+      "level": 1
+    },
+    {
+      "id": "0002",
+      "name": "Eric",
+      "mail_addr": "Eric@xxxx.com",
+      "team": "SYS_1",
+      "role_name": "apply",
+      "role_id": "apply",
+      "level": 2
+    },
+    {
+      "id": "0003",
+      "name": "Eric3",
+      "mail_addr": "Eric@xxxx.com",
+      "team": "SYS_1",
+      "role_name": "apply",
+      "role_id": "apply",
+      "level": 2
+    },
+    {
+      "id": "AAAAA",
+      "name": "荻巣　裕史",
+      "mail_addr": "YUG@DOCOMO.NE.JP",
+      "team": "運用",
+      "role_id": 1234579,
+      "level": 3
+    }
+  ],
+  "roles": [
+    {
+      "id": 123456,
+      "name": "administrator",
+      "status": "yes",
+      "copy_from": 123456,
+      "actions": "vm,patch,software,resource_management,apply,approve,process_management,run_task,task_management,manager_server_setting,server_setting,software_upload,software_setting,sub_job_setting,job_pattern_setting,job_server_setting,job_setting,user_setting,role_setting,workflow_setting,master_file_setting,maintenance_setting,system_setting,change_password,represent_setting,represent_change,user_common"
+    },
+    {
+      "id": 12345799,
+      "name": "approver",
+      "status": "no",
+      "copy_from": 123457,
+      "actions": "vm,user_common,change_password,represent_setting,represent_change,user_setting,role_setting"
+    },
+    {
+      "id": 12345899,
+      "name": "applyer",
+      "status": "no",
+      "copy_from": 123457,
+      "actions": "vm,user_common,change_password,represent_setting,represent_change,user_setting,role_setting"
+    },
+    {
+      "id": 1234579,
+      "name": "test1",
+      "status": "yes",
+      "copy_from": 123457,
+      "actions": "vm,user_common,change_password,represent_setting,represent_change"
+    },
+    {
+      "id": 1234578,
+      "name": "test2",
+      "status": "no",
+      "copy_from": 123457,
+      "actions": "vm,user_common,change_password,represent_setting,represent_change"
+    }
+  ],
+  "currentRole": {
+    "id": 1234569,
+    "name": "administrator",
+    "status": "yes",
+    "copy_from": 123456,
+    "actions": "vm,patch,software,resource_management,apply,approve,process_management,run_task,task_management,manager_server_setting,server_setting,software_upload,software_setting,sub_job_setting,job_pattern_setting,job_server_setting,job_setting,user_setting,role_setting,workflow_setting,master_file_setting,maintenance_setting,system_setting,change_password,represent_setting,represent_change,user_common"
+  },
+  "process": [
+    {
+      "process": "PA",
+      "max_level": 1
+    },
+    {
+      "process": "PB",
+      "max_level": 2
+    }
+  ],
+  "subJobs": [
+    {
+      "id": "1",
+      "name": "業務確認(事前)",
+      "count": "3",
+      "mainScript": "xxx",
+      "uuid": "/root/confirem_business",
+      "createTime": "2017/12/27 19:00",
+      "updateTime": "2017/12/27 19:00",
+      "methods": [
+        {
+          "id": "1",
+          "name": "方法1",
+          "waitTime": "3",
+          "timeout": "xxx",
+          "retry": "xxx",
+          "parameter": "[{\"key\": \"url\", \"value\": \"xxx\"}, {\"key\": \"username\", \"value\": \"xxx\"}, {\"key\": \"password\", \"value\": \"xxx\"}]",
+          "subjobId": "1"
+        },
+        {
+          "id": "2",
+          "name": "方法2",
+          "waitTime": "4",
+          "timeout": "xxx",
+          "retry": "xxx",
+          "parameter": "[{\"key\": \"url\", \"value\": \"xxx\"}, {\"key\": \"username\", \"value\": \"xxx\"}, {\"key\": \"password\", \"value\": \"xxx\"}]",
+          "subjobId": "2"
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "name": "サーバシャットダウン",
+      "count": "3",
+      "uuid": "/root/confirem_business",
+      "mainScript": "xxx",
+      "createTime": "2017/12/27 19:00",
+      "updateTime": "2017/12/27 19:00",
+      "methods": [
+        {
+          "id": "1",
+          "name": "方法1",
+          "waitTime": "3",
+          "timeout": "xxx",
+          "retry": "xxx",
+          "parameter": "[{\"key\": \"url\", \"value\": \"xxx\"}, {\"key\": \"username\", \"value\": \"xxx\"}, {\"key\": \"password\", \"value\": \"xxx\"}]",
+          "subjobId": "1"
+        },
+        {
+          "id": "2",
+          "name": "方法2",
+          "waitTime": "4",
+          "timeout": "xxx",
+          "retry": "xxx",
+          "parameter": "[{\"key\": \"url\", \"value\": \"xxx\"}, {\"key\": \"username\", \"value\": \"xxx\"}, {\"key\": \"password\", \"value\": \"xxx\"}]",
+          "subjobId": "2"
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "name": "業務確認",
+      "count": "3",
+      "runOnServer": "業務確認サーバ",
+      "runOnOstype": "windows7",
+      "mainScript": "confirm_bussiness",
+      "uuid": "/root/confirem_business",
+      "comment": "xxx",
+      "createTime": "2017/12/27 19:00",
+      "updateTime": "2017/12/27 19:00",
+      "methods": [
+        {
+          "id": "1",
+          "name": "方法1",
+          "waitTime": "3",
+          "timeout": "xxx",
+          "retry": "xxx",
+          "parameter": "[{\"key\": \"url\", \"value\": \"xxx\"}, {\"key\": \"username\", \"value\": \"xxx\"}, {\"key\": \"password\", \"value\": \"xxx\"}]",
+          "subjobId": "1"
+        },
+        {
+          "id": "2",
+          "name": "方法2",
+          "waitTime": "4",
+          "timeout": "xxx",
+          "retry": "xxx",
+          "parameter": "[{\"key\": \"url\", \"value\": \"xxx\"}, {\"key\": \"username\", \"value\": \"xxx\"}, {\"key\": \"password\", \"value\": \"xxx\"}]",
+          "subjobId": "2"
+        }
+      ]
+    }
+  ],
+  "passwordInfo": {
+    "create_time": "2017/01/31 9:00",
+    "password_expire": "2017/04/01 9:00"
+  },
+  "notice": {
+    "comment": "保守中",
+    "starttime": "2018/06/21 16:07:09",
+    "endtime": "2018/06/25 16:07:14"
+  },
+  "jobPatterns": [
+    {
+      "id": "1",
+      "name": "作業パターン1",
+      "modetype": "job",
+      "count": "8",
+      "createTime": "2017/12/27 19:00",
+      "updateTime": "2017/12/27 19:00",
+      "patternSubjobMethods": [
+        {
+          "id": "1",
+          "subjobId": "1",
+          "number": 1,
+          "subjobName": "業務確認（事前）",
+          "nextAutoaction": true,
+          "method": {
+            "id": "1",
+            "name": "方法1",
+            "waitTime": "3",
+            "timeout": "xxx",
+            "retry": "xxx",
+            "parameter": "[{\"key\": \"url\", \"value\": \"xxx\"}, {\"key\": \"username\", \"value\": \"xxx\"}, {\"key\": \"password\", \"value\": \"xxx\"}]"
+          },
+          "recoveryName": "なし",
+          "recoveryRunmode": "auto"
+        },
+        {
+          "id": "2",
+          "subjobId": "2",
+          "number": 2,
+          "subjobName": "サーバシャットダウン",
+          "nextAutoaction": true,
+          "method": {
+            "id": "1",
+            "name": "方法1",
+            "waitTime": "3",
+            "timeout": "xxx",
+            "retry": "xxx",
+            "parameter": "[{\"key\": \"url\", \"value\": \"xxx\"}, {\"key\": \"username\", \"value\": \"xxx\"}, {\"key\": \"password\", \"value\": \"xxx\"}]"
+          },
+          "recoveryId": "2",
+          "recoveryName": "リカバリパターン2",
+          "recoveryRunmode": "auto"
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "name": "作業パターン2",
+      "modetype": "recovery",
+      "count": "8",
+      "createTime": "2017/12/27 19:00",
+      "updateTime": "2017/12/27 19:00",
+      "patternSubjobMethods": [
+        {
+          "id": "1",
+          "subjobId": "1",
+          "number": 1,
+          "subjobName": "業務確認（事前）",
+          "nextAutoaction": true,
+          "method": {
+            "id": "1",
+            "name": "方法1",
+            "waitTime": "3",
+            "timeout": "xxx",
+            "retry": "xxx",
+            "parameter": "[{\"key\": \"url\", \"value\": \"xxx\"}, {\"key\": \"username\", \"value\": \"xxx\"}, {\"key\": \"password\", \"value\": \"xxx\"}]"
+          },
+          "recoveryName": "なし",
+          "recoveryRunmode": "auto"
+        },
+        {
+          "id": "2",
+          "subjobId": "2",
+          "number": 2,
+          "subjobName": "サーバシャットダウン",
+          "nextAutoaction": true,
+          "method": {
+            "id": "1",
+            "name": "方法1",
+            "waitTime": "3",
+            "timeout": "xxx",
+            "retry": "xxx",
+            "parameter": "[{\"key\": \"url\", \"value\": \"xxx\"}, {\"key\": \"username\", \"value\": \"xxx\"}, {\"key\": \"password\", \"value\": \"xxx\"}]"
+          },
+          "recoveryName": "なし",
+          "recoveryRunmode": "auto"
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "name": "作業パターン3",
+      "modetype": "job",
+      "comment": "xxxxxxxxx",
+      "patternSubjobMethods": [
+        {
+          "id": "1",
+          "subjobId": "1",
+          "number": 1,
+          "subjobName": "業務確認（事前）",
+          "nextAutoaction": true,
+          "method": {
+            "id": "1",
+            "name": "方法1",
+            "waitTime": "3",
+            "timeout": "xxx",
+            "retry": "xxx",
+            "parameter": "[{\"key\": \"url\", \"value\": \"xxx\"}, {\"key\": \"username\", \"value\": \"xxx\"}, {\"key\": \"password\", \"value\": \"xxx\"}]"
+          },
+          "recoveryName": "なし",
+          "recoveryRunmode": "auto"
+        },
+        {
+          "id": "2",
+          "subjobId": "2",
+          "number": 2,
+          "subjobName": "サーバシャットダウン",
+          "nextAutoaction": true,
+          "method": {
+            "id": "1",
+            "name": "方法1",
+            "waitTime": "3",
+            "timeout": "xxx",
+            "retry": "xxx",
+            "parameter": "[{\"key\": \"url\", \"value\": \"xxx\"}, {\"key\": \"username\", \"value\": \"xxx\"}, {\"key\": \"password\", \"value\": \"xxx\"}]"
+          },
+          "recoveryId": "2",
+          "recoveryName": "リカバリパターン2",
+          "recoveryRunmode": "auto"
+        }
+      ]
+    }
+  ],
+  "servers": [
+    {
+      "id": "1",
+      "name": "windows",
+      "host": "localhost",
+      "ip": "192.168.3.23",
+      "status": "noCommunication",
+      "osfullname": "Microsoft Winodws Server 2012 Standard",
+      "osType": "windows",
+      "os_start_time": "2018/5/8 14:00",
+      "domain": "WORKGROPU",
+      "version": "2008",
+      "osservicepack": "xxx",
+      "cpuarch": "ADM64",
+      "cpu_count": "2",
+      "cpu_mode": "Westmere E56xx/L56xx/X56xx (Nehalem-C)",
+      "memory_size": "4096",
+      "diskUsage": "xxx",
+      "patterns": [
+        {
+          "id": "1",
+          "name": "作業パターン1",
+          "modetype": "job",
+          "count": "8",
+          "createTime": "2017/12/27 19:00",
+          "updateTime": "2017/12/27 19:00",
+          "subJobInfo": [
+            {
+              "id": "1",
+              "subjobId": "1",
+              "number": 1,
+              "subjobName": "業務確認（事前）",
+              "nextAutoaction": true,
+              "method": {
+                "id": "1",
+                "name": "方法1",
+                "waitTime": "3",
+                "timeout": "xxx",
+                "retry": "xxx",
+                "parameter": "[{\"key\": \"url\", \"value\": \"xxx\"}, {\"key\": \"username\", \"value\": \"xxx\"}, {\"key\": \"password\", \"value\": \"xxx\"}]"
+              },
+              "recoveryName": "なし",
+              "recoveryRunmode": "auto"
+            },
+            {
+              "id": "2",
+              "subjobId": "2",
+              "number": 2,
+              "subjobName": "サーバシャットダウン",
+              "nextAutoaction": true,
+              "method": {
+                "id": "1",
+                "name": "方法1",
+                "waitTime": "3",
+                "timeout": "xxx",
+                "retry": "xxx",
+                "parameter": "[{\"key\": \"url\", \"value\": \"xxx\"}, {\"key\": \"username\", \"value\": \"xxx\"}, {\"key\": \"password\", \"value\": \"xxx\"}]"
+              },
+              "recoveryId": "2",
+              "recoveryName": "リカバリパターン2",
+              "recoveryRunmode": "auto"
+            }
+          ]
+        },
+        {
+          "id": "2",
+          "name": "作業パターン2",
+          "modetype": "recovery",
+          "count": "8",
+          "createTime": "2017/12/27 19:00",
+          "updateTime": "2017/12/27 19:00",
+          "subJobInfo": [
+            {
+              "id": "1",
+              "subjobId": "1",
+              "number": 1,
+              "subjobName": "業務確認（事前）",
+              "nextAutoaction": true,
+              "method": {
+                "id": "1",
+                "name": "方法1",
+                "waitTime": "3",
+                "timeout": "xxx",
+                "retry": "xxx",
+                "parameter": "[{\"key\": \"url\", \"value\": \"xxx\"}, {\"key\": \"username\", \"value\": \"xxx\"}, {\"key\": \"password\", \"value\": \"xxx\"}]"
+              },
+              "recoveryName": "なし",
+              "recoveryRunmode": "auto"
+            },
+            {
+              "id": "2",
+              "subjobId": "2",
+              "number": 2,
+              "subjobName": "サーバシャットダウン",
+              "nextAutoaction": true,
+              "method": {
+                "id": "1",
+                "name": "方法1",
+                "waitTime": "3",
+                "timeout": "xxx",
+                "retry": "xxx",
+                "parameter": "[{\"key\": \"url\", \"value\": \"xxx\"}, {\"key\": \"username\", \"value\": \"xxx\"}, {\"key\": \"password\", \"value\": \"xxx\"}]"
+              },
+              "recoveryId": "2",
+              "recoveryName": "リカバリパターン2",
+              "recoveryRunmode": "auto"
+            }
+          ]
+        },
+        {
+          "id": "3",
+          "name": "作業パターン3",
+          "modetype": "job",
+          "comment": "xxxxxxxxx",
+          "subJobInfo": [
+            {
+              "id": "1",
+              "subjobId": "1",
+              "number": 1,
+              "subjobName": "業務確認（事前）",
+              "nextAutoaction": true,
+              "method": {
+                "id": "1",
+                "name": "方法1",
+                "waitTime": "3",
+                "timeout": "xxx",
+                "retry": "xxx",
+                "parameter": "[{\"key\": \"url\", \"value\": \"xxx\"}, {\"key\": \"username\", \"value\": \"xxx\"}, {\"key\": \"password\", \"value\": \"xxx\"}]"
+              },
+              "recoveryName": "なし",
+              "recoveryRunmode": "auto"
+            },
+            {
+              "id": "2",
+              "subjobId": "2",
+              "number": 2,
+              "subjobName": "サーバシャットダウン",
+              "nextAutoaction": true,
+              "method": {
+                "id": "1",
+                "name": "方法1",
+                "waitTime": "3",
+                "timeout": "xxx",
+                "retry": "xxx",
+                "parameter": "[{\"key\": \"url\", \"value\": \"xxx\"}, {\"key\": \"username\", \"value\": \"xxx\"}, {\"key\": \"password\", \"value\": \"xxx\"}]"
+              },
+              "recoveryId": "2",
+              "recoveryName": "リカバリパターン2",
+              "recoveryRunmode": "auto"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "name": "server1",
+      "host": "host1",
+      "ip": "1.1.1.1",
+      "osfullname": "Microsoft Winodws Server 2012 Standard",
+      "osType": "windows",
+      "version": "2008",
+      "osservicepack": "xxx",
+      "cpuarch": "ADM64",
+      "diskUsage": "xxx",
+      "status": "idling"
+    },
+    {
+      "id": "2",
+      "name": "server2",
+      "host": "host2",
+      "ip": "1.1.1.2",
+      "osfullname": "Red Hat Enterprise linux Server",
+      "osType": "linux",
+      "version": "7.2",
+      "osservicepack": "xxx",
+      "cpuarch": "x86_64",
+      "diskUsage": "xxx",
+      "status": "executing"
+    }
+  ],
+  "serverPatterns": [
+    {
+      "id": "1",
+      "name": "pattern1"
+    },
+    {
+      "id": "2",
+      "name": "pattern2"
+    }
+  ],
+  "executeServer": {
+    "business": [
+      {
+        "createTime": "2018-06-14 09:40:01",
+        "deleteFlag": false,
+        "groupName": "group1",
+        "id": 1,
+        "osType": "windows7",
+        "updateTime": "2018-06-14 09:40:01"
+      },
+      {
+        "createTime": "2018-06-14 09:40:01",
+        "deleteFlag": false,
+        "groupName": "group3",
+        "id": 3,
+        "osType": "windows10",
+        "updateTime": "2018-06-14 09:40:01"
+      }
+    ],
+    "other": [
+      {
+        "createTime": "2018-06-14 09:40:01",
+        "deleteFlag": false,
+        "id": 2,
+        "ipAddress": "1.1.1.2",
+        "serverName": "other2",
+        "updateTime": "2018-06-14 09:40:01"
+      },
+      {
+        "createTime": "2018-06-14 09:42:50",
+        "deleteFlag": false,
+        "id": 4,
+        "ipAddress": "1.1.1.2",
+        "serverName": "other2",
+        "updateTime": "2018-06-14 09:42:50"
+      }
+    ],
+    "manage": [
+      "windows",
+      "linux",
+      "solaris"
+    ]
+  },
+  "checkOtherservers": {
+    "checkOtherservers": true
+  },
+  "applies": [
+    {
+      "taskno": "20170123-0001-004",
+      "user_name": "userA",
+      "name": "serverA",
+      "hostname": "localhost",
+      "ip": "1.1.1.1",
+      "begin_time": "2018/4/19 21:00",
+      "status": "failEnd",
+      "applyno": "20170123-0001",
+      "pre_start_time": "2018/6/20 8:00",
+      "job_name": "OSバッチ適用1",
+      "start_method": "時刻起動",
+      "start_time": "2018/5/19 21:00",
+      "end_time": "2018/6/19 22:00",
+      "subjob": "システムバックアップ"
+    },
+    {
+      "taskno": "20170123-0001-003",
+      "user_name": "userB",
+      "name": "serverB",
+      "hostname": "localhost",
+      "ip": "1.1.1.1",
+      "begin_time": "2018/5/19 21:00",
+      "status": "failEnd",
+      "applyno": "20170123-0001",
+      "pre_start_time": "2018/6/10 8:00",
+      "job_name": "OSバッチ適用2",
+      "start_method": "時刻起動",
+      "start_time": "2018/4/19 21:00",
+      "end_time": "2018/6/19 22:00",
+      "subjob": "システムバックアップ"
+    },
+    {
+      "taskno": "20170123-0001-005",
+      "user_name": "userC",
+      "name": "serverC",
+      "hostname": "localhost",
+      "ip": "1.1.1.1",
+      "begin_time": "2018/3/19 21:00",
+      "status": "failEnd",
+      "applyno": "20170123-0001",
+      "pre_start_time": "2018/3/19 8:00",
+      "job_name": "OSバッチ適用3",
+      "start_method": "auto",
+      "start_time": "2018/6/19 21:00",
+      "end_time": "2018/6/19 22:00",
+      "subjob": "システムバックアップ"
+    }
+  ],
+  "ospatchs": {
+    "patches": [
+      {
+        "id": "1",
+        "name": "KB0003",
+        "issuer": "chrome",
+        "patch_installdate": "xxx",
+        "size": "170MB",
+        "version": "2.1"
+      },
+      {
+        "id": "2",
+        "name": "KB0002",
+        "issuer": "firefox",
+        "patch_installdate": "xxx",
+        "size": "180MB",
+        "version": "2"
+      }
+    ],
+    "OS_patch_syn_time": "2018/4/14 09:00:00"
+  },
+  "softwares": {
+    "softwares": [
+      {
+        "id": "1",
+        "name": "KB00033",
+        "issuer": "firefox",
+        "patch_installdate": "xxx",
+        "size": "170MB",
+        "version": "2.1"
+      },
+      {
+        "id": "2",
+        "name": "KB00022",
+        "issuer": "chrome",
+        "patch_installdate": "xxx",
+        "size": "180MB",
+        "version": "2"
+      }
+    ],
+    "software_syn_time": "2018/4/15 09:00:00"
+  },
+  "apply": [
+    {
+      "id": "20170123-0001",
+      "no": "20170123-0001",
+      "userId": "二宫和也",
+      "startTime": "2018/4/4 16:00:00",
+      "jobName": "OSパッチ適用",
+      "jobCategory": "patch",
+      "createTime": "2018/04/17 16:00:00",
+      "status": "applied",
+      "serverPatchPatternBinding": [
+        {
+          "server": {
+            "id": 2,
+            "name": "server1"
+          },
+          "patch": [
+            {
+              "id": 1,
+              "name": "patch1"
+            },
+            {
+              "id": 2,
+              "name": "patch2"
+            }
+          ],
+          "startMethod": "timeExecute",
+          "startTime": "2018-5-11 20:20:00",
+          "patternJson": {
+            "id": "1",
+            "name": "作業パターン1"
+          }
+        }
+      ],
+      "approver": [
+        {
+          "id": "0001",
+          "level": "Level1",
+          "approve": {
+            "approver": "approvalA",
+            "result": "agree"
+          },
+          "date": "2018/5/15 9:30:00"
+        },
+        {
+          "id": "0002",
+          "level": "Level2",
+          "approve": {
+            "approver": "approvalB",
+            "result": "veto"
+          },
+          "date": "2018/5/15 9:30:00"
+        }
+      ]
+    },
+    {
+      "id": "20170123-00401",
+      "no": "20170123-00401",
+      "userId": "userA",
+      "startTime": "2018/4/4 16:00:00",
+      "jobCategory": "patch",
+      "jobName": "OSパッチ適用",
+      "createTime": "2018/04/17 16:00:00",
+      "status": "applied",
+      "serverPatchPatternBinding": [
+        {
+          "server": {
+            "id": 2,
+            "name": "server1"
+          },
+          "patch": [
+            {
+              "id": 1,
+              "name": "patch1"
+            },
+            {
+              "id": 2,
+              "name": "patch2"
+            }
+          ],
+          "startMethod": "timeExecute",
+          "startTime": "2018-5-11 20:20:00",
+          "patternJson": {
+            "id": "1",
+            "name": "作業パターン1"
+          }
+        }
+      ],
+      "approver": [
+        {
+          "id": "0001",
+          "level": "Level1",
+          "approve": {
+            "approver": "approvalA",
+            "result": "agree"
+          },
+          "date": "2018/5/15 9:30:00"
+        },
+        {
+          "id": "0002",
+          "level": "Level2",
+          "approve": {
+            "approver": "approvalB",
+            "result": "veto"
+          },
+          "date": "2018/5/15 9:30:00"
+        }
+      ]
+    },
+    {
+      "id": "20170123-03001",
+      "no": "20170123-03001",
+      "userId": "userA",
+      "startTime": "2018/4/4 16:00:00",
+      "jobName": "OSパッチ適用",
+      "jobCategory": "patch",
+      "createTime": "2018/04/17 16:00:00",
+      "status": "applied",
+      "serverPatchPatternBinding": [
+        {
+          "server": {
+            "id": 2,
+            "name": "server1"
+          },
+          "patch": [
+            {
+              "id": 1,
+              "name": "patch1"
+            },
+            {
+              "id": 2,
+              "name": "patch2"
+            }
+          ],
+          "startMethod": "timeExecute",
+          "startTime": "2018-5-11 20:20:00",
+          "patternJson": {
+            "id": "1",
+            "name": "作業パターン1"
+          }
+        }
+      ],
+      "approver": [
+        {
+          "id": "0001",
+          "level": "Level1",
+          "approve": {
+            "approver": "approvalA",
+            "result": "agree"
+          },
+          "date": "2018/5/15 9:30:00"
+        },
+        {
+          "id": "0002",
+          "level": "Level2",
+          "approve": {
+            "approver": "approvalB",
+            "result": "veto"
+          },
+          "date": "2018/5/15 9:30:00"
+        }
+      ]
+    },
+    {
+      "id": "20170123-05001",
+      "no": "20170123-05001",
+      "userId": "userA",
+      "startTime": "2018/4/4 16:00:00",
+      "jobName": "OSパッチ適用",
+      "jobCategory": "patch",
+      "createTime": "2018/04/17 16:00:00",
+      "status": "created",
+      "serverPatchPatternBinding": [
+        {
+          "server": {
+            "id": 2,
+            "name": "server1"
+          },
+          "patch": [
+            {
+              "id": 1,
+              "name": "patch1"
+            },
+            {
+              "id": 2,
+              "name": "patch2"
+            }
+          ],
+          "startMethod": "timeExecute",
+          "startTime": "2018-5-11 20:20:00",
+          "patternJson": {
+            "id": "1",
+            "name": "作業パターン1"
+          }
+        }
+      ],
+      "approver": [
+        {
+          "id": "0001",
+          "level": "Level1",
+          "approve": {
+            "approver": "approvalA",
+            "result": "agree"
+          },
+          "date": "2018/5/15 9:30:00"
+        },
+        {
+          "id": "0002",
+          "level": "Level2",
+          "approve": {
+            "approver": "approvalB",
+            "result": "veto"
+          },
+          "date": "2018/5/15 9:30:00"
+        }
+      ]
+    }
+  ],
+  "tasks": [
+    {
+      "id": "1",
+      "serverPatchPatternBindingId": "1",
+      "beginTime": "2018/5/9 10:10:10",
+      "endTime": "2018/5/9 10:10:10",
+      "status": "failEnd",
+      "systemTime": "2018/4/9 10:10:10",
+      "serverPatchPatternBinding": {
+        "applyNo": "1",
+        "serverId": "1",
+        "startMethod": "manualExecute",
+        "startTime": "2018/4/11 20:20:20",
+        "server": {
+          "name": "server1",
+          "hostName": "localhost",
+          "ip": "1.1.1.1"
+        }
+      },
+      "userId": "1",
+      "jobName": "OSパッチ情報",
+      "startTime": "2018/4/11 20:20:20",
+      "userName": "user1",
+      "osType": "linux",
+      "currentSubjob": "業務確認（事前）",
+      "patternjson": {
+        "pattern_object": {
+          "pattern_name": "",
+          "modetype": "",
+          "pattern_comment": "",
+          "pattern_create_time": "",
+          "pattern_update_time": ""
+        },
+        "create_time": "2018/4/11 20:20:20",
+        "update_time": "2018/6/11 20:20:20",
+        "subjob_info": [
+          {
+            "number": "1",
+            "subjobId": "1",
+            "subjob_object": {
+              "subjob_name": "業務確認（事前）",
+              "script": "",
+              "subjob_comment": "",
+              "run_on_server": "",
+              "run_on_OStype": "",
+              "main_script": "",
+              "upload_folder": "",
+              "server_ip": "",
+              "group": "",
+              "status": "failEnd",
+              "run_starttime": "2018/4/11 20:20:20",
+              "run_endtime": "2018/6/11 20:20:20"
+            },
+            "next_autoaction": true,
+            "recovery_id": "2",
+            "recovery_runMode": "auto",
+            "methodId": "1",
+            "method_object": {
+              "method_name": "method1",
+              "wait_time": "1",
+              "timeout": "1",
+              "retry": "1",
+              "parameter": "[{\"key\": \"url\", \"value\": \"xxx\"}, {\"key\": \"username\", \"value\": \"xxx\"}, {\"key\": \"password\", \"value\": \"xxx\"}]"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "patches": [
+    {
+      "id": "1",
+      "name": "test",
+      "issuer": "admin",
+      "size": "50",
+      "version": "1.0",
+      "runOs": "linux",
+      "installedCount": 3,
+      "osPatchSynTime": "2018/06/12 17:23:14",
+      "installedOsPatch": [
+        {
+          "id": 1001,
+          "name": "test",
+          "hostName": "linux",
+          "ip": "192.168.2.1",
+          "fullName": "linux",
+          "version": null,
+          "servicePack": null,
+          "patchInstallDate": 1499788800000,
+          "patchInstallDateFormat": "2017/07/12 00:00:00",
+          "osPatchSynTime": 1528795394140
+        },
+        {
+          "id": 1002,
+          "name": "test66666",
+          "hostName": "test",
+          "ip": "test",
+          "fullName": "test",
+          "version": null,
+          "servicePack": null,
+          "patchInstallDate": 1499788800000,
+          "patchInstallDateFormat": "2017/07/12 00:00:00",
+          "osPatchSynTime": 1528795394140
+        },
+        {
+          "id": 1003,
+          "name": "ssssss",
+          "hostName": "test",
+          "ip": "10.167.223.23",
+          "fullName": "test",
+          "version": null,
+          "servicePack": null,
+          "patchInstallDate": 1499788800000,
+          "patchInstallDateFormat": "2017/07/12 00:00:00",
+          "osPatchSynTime": 1528795394140
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "name": "test2",
+      "issuer": "admin",
+      "size": "50",
+      "version": "1.0",
+      "runOs": "linux",
+      "installedOsPatch": [
+        {
+          "id": 1001,
+          "name": "test",
+          "hostName": "linux",
+          "ip": "192.168.2.1",
+          "fullName": "linux",
+          "version": null,
+          "servicePack": null,
+          "patchInstallDate": 1499788800000,
+          "patchInstallDateFormat": "2017/07/12 00:00:00",
+          "osPatchSynTime": 1528795394140
+        },
+        {
+          "id": 1002,
+          "name": "test66666",
+          "hostName": "test",
+          "ip": "test",
+          "fullName": "test",
+          "version": null,
+          "servicePack": null,
+          "patchInstallDate": 1499788800000,
+          "patchInstallDateFormat": "2017/07/12 00:00:00",
+          "osPatchSynTime": 1528795394140
+        },
+        {
+          "id": 1003,
+          "name": "ssssss",
+          "hostName": "test",
+          "ip": "10.167.223.23",
+          "fullName": "test",
+          "version": null,
+          "servicePack": null,
+          "patchInstallDate": 1499788800000,
+          "patchInstallDateFormat": "2017/07/12 00:00:00",
+          "osPatchSynTime": 1528795394140
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "name": "test3",
+      "issuer": "admin",
+      "size": "50",
+      "version": "1.0",
+      "runOs": "linux",
+      "installedOsPatch": [
+        {
+          "id": 1001,
+          "name": "test",
+          "hostName": "linux",
+          "ip": "192.168.2.1",
+          "fullName": "linux",
+          "version": null,
+          "servicePack": null,
+          "patchInstallDate": 1499788800000,
+          "patchInstallDateFormat": "2017/07/12 00:00:00",
+          "osPatchSynTime": 1528795394140
+        },
+        {
+          "id": 1002,
+          "name": "test66666",
+          "hostName": "test",
+          "ip": "test",
+          "fullName": "test",
+          "version": null,
+          "servicePack": null,
+          "patchInstallDate": 1499788800000,
+          "patchInstallDateFormat": "2017/07/12 00:00:00",
+          "osPatchSynTime": 1528795394140
+        },
+        {
+          "id": 1003,
+          "name": "ssssss",
+          "hostName": "test",
+          "ip": "10.167.223.23",
+          "fullName": "test",
+          "version": null,
+          "servicePack": null,
+          "patchInstallDate": 1499788800000,
+          "patchInstallDateFormat": "2017/07/12 00:00:00",
+          "osPatchSynTime": 1528795394140
+        }
+      ]
+    }
+  ],
+  "log": {
+    "id": "20180123-0001-004",
+    "server_patch_pattern_binding_id": "0001",
+    "applyNo": "0123",
+    "serverId": "001",
+    "name": "server1",
+    "beginTime": "2018-5-9 10:10",
+    "endTime": "2018-5-9 10:10",
+    "status": "unexecuted",
+    "patternjson": "jsontext"
+  },
+  "patchDiff": {
+    "beforelist": [
+      {
+        "name": "KB0001",
+        "issuer": "Windows",
+        "size": "2.5M",
+        "patch_install_date": "2018/4/14 09:00:00"
+      }
+    ],
+    "afterlist": [
+      {
+        "name": "KB0001",
+        "issuer": "Windows",
+        "size": "2.5M",
+        "patch_install_date": "2018/4/14 09:00:00"
+      },
+      {
+        "name": "KB0002",
+        "issuer": "Windows",
+        "size": "2.5M",
+        "patch_install_date": "2018/4/15 09:00:00"
+      }
+    ],
+    "difflist": [
+      {
+        "name": "KB0002",
+        "issuer": "Windows",
+        "size": "2.5M",
+        "patch_install_date": "2018/4/15 09:00:00"
+      }
+    ]
+  },
+  "uploadSoftwares": [
+    {
+      "id": 1,
+      "softwareNo": "123123",
+      "name": "test1",
+      "issuer": "test1",
+      "version": "123",
+      "runOs": "linux",
+      "bits": 32,
+      "uploadFileName": "E:/1529928096858.docx"
+    },
+    {
+      "id": 2,
+      "softwareNo": "44",
+      "name": "test1",
+      "issuer": "test1",
+      "version": "123",
+      "runOs": "linux",
+      "bits": 32,
+      "uploadFileName": "E:/1529928096858.docx"
+    },
+    {
+      "id": 3,
+      "softwareNo": "123123435",
+      "name": "aaa",
+      "issuer": "test1",
+      "version": "123",
+      "runOs": "linux",
+      "bits": 32,
+      "uploadFileName": "E:/1529928096858.docx"
+    },
+    {
+      "id": 4,
+      "softwareNo": "123123",
+      "name": "teswerwert1",
+      "issuer": "test1",
+      "version": "123",
+      "runOs": "solaris",
+      "bits": 32,
+      "uploadFileName": "E:/1529928096858.docx"
+    },
+    {
+      "id": 5,
+      "softwareNo": "123123",
+      "name": "test1",
+      "issuer": "test1",
+      "version": "123",
+      "runOs": "windows",
+      "bits": 32,
+      "uploadFileName": "E:/1529928096858.docx"
+    },
+    {
+      "softwareNo": "232134",
+      "name": "3234er",
+      "issuer": "234",
+      "version": "123",
+      "runOs": "windows",
+      "bits": "32",
+      "id": 6
+    }
+  ],
+  "approves": [
+    {
+      "id": "20170123-0001",
+      "no": "20170123-0001",
+      "userId": "二宫和也",
+      "startTime": "2018/4/4 16:00:00",
+      "jobName": "OSパッチ適用",
+      "jobCategory": "patch",
+      "createTime": "2018/04/17 16:00:00",
+      "status": "applied",
+      "serverPatchPatternBinding": [
+        {
+          "server": {
+            "id": 2,
+            "name": "server1"
+          },
+          "patch": [
+            {
+              "id": 1,
+              "name": "patch1"
+            },
+            {
+              "id": 2,
+              "name": "patch2"
+            }
+          ],
+          "startMethod": "timeExecute",
+          "startTime": "2018-5-11 20:20:00",
+          "patternJson": {
+            "id": "1",
+            "name": "作業パターン1"
+          }
+        }
+      ],
+      "approver": [
+        {
+          "id": "0001",
+          "level": "Level1",
+          "approve": {
+            "approver": "approvalA",
+            "result": "agree"
+          },
+          "date": "2018/5/15 9:30:00"
+        },
+        {
+          "id": "0002",
+          "level": "Level2",
+          "approve": {
+            "approver": "approvalB",
+            "result": "veto"
+          },
+          "date": "2018/5/15 9:30:00"
+        }
+      ]
+    },
+    {
+      "id": "20170123-00401",
+      "no": "20170123-00401",
+      "userId": "userA",
+      "startTime": "2018/4/4 16:00:00",
+      "jobCategory": "patch",
+      "jobName": "OSパッチ適用",
+      "createTime": "2018/04/17 16:00:00",
+      "status": "applied",
+      "serverPatchPatternBinding": [
+        {
+          "server": {
+            "id": 2,
+            "name": "server1"
+          },
+          "patch": [
+            {
+              "id": 1,
+              "name": "patch1"
+            },
+            {
+              "id": 2,
+              "name": "patch2"
+            }
+          ],
+          "startMethod": "timeExecute",
+          "startTime": "2018-5-11 20:20:00",
+          "patternJson": {
+            "id": "1",
+            "name": "作業パターン1"
+          }
+        }
+      ],
+      "approver": [
+        {
+          "id": "0001",
+          "level": "Level1",
+          "approve": {
+            "approver": "approvalA",
+            "result": "agree"
+          },
+          "date": "2018/5/15 9:30:00"
+        },
+        {
+          "id": "0002",
+          "level": "Level2",
+          "approve": {
+            "approver": "approvalB",
+            "result": "veto"
+          },
+          "date": "2018/5/15 9:30:00"
+        }
+      ]
+    },
+    {
+      "id": "20170123-03001",
+      "no": "20170123-03001",
+      "userId": "userA",
+      "startTime": "2018/4/4 16:00:00",
+      "jobName": "OSパッチ適用",
+      "jobCategory": "patch",
+      "createTime": "2018/04/17 16:00:00",
+      "status": "applied",
+      "serverPatchPatternBinding": [
+        {
+          "server": {
+            "id": 2,
+            "name": "server1"
+          },
+          "patch": [
+            {
+              "id": 1,
+              "name": "patch1"
+            },
+            {
+              "id": 2,
+              "name": "patch2"
+            }
+          ],
+          "startMethod": "timeExecute",
+          "startTime": "2018-5-11 20:20:00",
+          "patternJson": {
+            "id": "1",
+            "name": "作業パターン1"
+          }
+        }
+      ],
+      "approver": [
+        {
+          "id": "0001",
+          "level": "Level1",
+          "approve": {
+            "approver": "approvalA",
+            "result": "agree"
+          },
+          "date": "2018/5/15 9:30:00"
+        },
+        {
+          "id": "0002",
+          "level": "Level2",
+          "approve": {
+            "approver": "approvalB",
+            "result": "veto"
+          },
+          "date": "2018/5/15 9:30:00"
+        }
+      ]
+    },
+    {
+      "id": "20170123-05001",
+      "no": "20170123-05001",
+      "userId": "userA",
+      "startTime": "2018/4/4 16:00:00",
+      "jobName": "OSパッチ適用",
+      "jobCategory": "patch",
+      "createTime": "2018/04/17 16:00:00",
+      "status": "created",
+      "serverPatchPatternBinding": [
+        {
+          "server": {
+            "id": 2,
+            "name": "server1"
+          },
+          "patch": [
+            {
+              "id": 1,
+              "name": "patch1"
+            },
+            {
+              "id": 2,
+              "name": "patch2"
+            }
+          ],
+          "startMethod": "timeExecute",
+          "startTime": "2018-5-11 20:20:00",
+          "patternJson": {
+            "id": "1",
+            "name": "作業パターン1"
+          }
+        }
+      ],
+      "approver": [
+        {
+          "id": "0001",
+          "level": "Level1",
+          "approve": {
+            "approver": "approvalA",
+            "result": "agree"
+          },
+          "date": "2018/5/15 9:30:00"
+        },
+        {
+          "id": "0002",
+          "level": "Level2",
+          "approve": {
+            "approver": "approvalB",
+            "result": "veto"
+          },
+          "date": "2018/5/15 9:30:00"
+        }
+      ]
+    }
+  ],
+  "softList": {
+    "softWareList":[
+      {
+        "id":2001,
+        "softwareNo":"2001",
+        "name":"chrome",
+        "size":"50",
+        "issuer":"google",
+        "version":"48",
+        "runOs":"windows",
+        "bits":null,
+        "uploadFileName":null
+      },
+      {
+        "id":2002,
+        "softwareNo":"2002",
+        "name":"googlemap",
+        "size":"100",
+        "issuer":"google",
+        "version":"67",
+        "runOs":"windows",
+        "bits":null,
+        "uploadFileName":null
+      },
+      {
+        "id":3,
+        "softwareNo":"2003",
+        "name":"androidstudio",
+        "size":"1000",
+        "issuer":"google",
+        "version":"3.2",
+        "runOs":"windows",
+        "bits":null,
+        "uploadFileName":null
+      }
+    ],
+    "softwareSynTime":"2018/06/21 10:26:02"
+  }
+}

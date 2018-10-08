@@ -1,0 +1,129 @@
+@import './variables.less';
+
+body {
+  font-family: "ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro",Osaka,"メイリオ",Meiryo,"ＭＳ Ｐゴシック","MS PGothic",sans-serif!important;
+}
+
+.header {
+  background: linear-gradient(to bottom right, #4d79e7, white 20%, rgba(178,197,231, 0.6) 25%, white 50%, rgba(178,197,231, 0.6) 75%, white 80%, #4d79e7);
+  box-shadow: 0 0 10px 0 @gray-color;
+}
+
+.h3,h3 {
+  font-size: 1.5rem;
+}
+
+.ant-btn {
+  box-shadow: 2px 2px 3px #ddd;
+}
+.ant-input,.ant-select-selection,.ant-input-number {
+  border-style: inset;
+}
+
+.ant-layout-content {
+  padding: @middle-space;
+}
+
+.ant-modal-body {
+  max-height: 600px;
+  overflow-y: auto;
+
+  .ant-form .ant-form-item {
+    margin-bottom: 0;
+  }
+}
+
+.button-area {
+  button {
+    margin-right: 16px;
+  }
+}
+
+.margin-bottom-small {
+  margin-bottom: @small-space;
+}
+
+.margin-bottom-middle {
+  margin-bottom: @middle-space;
+}
+
+.margin-right-small {
+  margin-right: @small-space;
+}
+
+.margin-right-middle {
+  margin-right: @middle-space;
+}
+
+.table-view .margin-bottom-middle button {
+  margin-right: @middle-space;
+}
+
+.table-view .margin-bottom-middle .ant-form-item-label {
+  label {
+    margin-bottom: 0;
+  }
+}
+
+.page-info {
+  margin-bottom: @large-space;
+}
+
+.page-info h3 {
+  margin-bottom: @middle-space;
+}
+
+.ant-table-pagination.ant-pagination {
+  margin-bottom: 0;
+}
+
+//table
+table {
+  padding: 0 !important;
+  thead > tr > th {
+    background-color: @gray-color !important;
+  }
+}
+
+.ant-table-thead > tr > th[colspan] {
+  text-align: left;
+}
+// .ant-tooltip-inner {
+//   width: 800px;
+// }
+
+.sub-table .ant-table-small {
+  border: 0;
+}
+
+.ant-divider-horizontal {
+  margin: 0;
+}
+
+.server-job-setting .ant-list-grid .ant-list-item {
+  margin-bottom: 0;
+}
+
+.server-job-setting .ant-card-body {
+  padding: 0;
+}
+
+.ant-table-tbody .out-col {
+  padding: 0 !important;
+}
+
+.ant-modal-body .ant-tabs-nav-scroll {
+  background: #fff;
+}
+
+.ant-form-extra {
+  width: 300px;
+}
+
+p {
+  word-break:break-all;
+}
+
+.anticon-close-circle {
+  color: red;
+}

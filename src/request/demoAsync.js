@@ -2,7 +2,7 @@ import 'whatwg-fetch';
 import { paramToQuery, fetchOptions } from '../utils/fetch';
 
 export function increaseAsync(params = {}) {
-  const BASE_URL = '/demoAsync/increase';
+  const BASE_URL = '/api/increase';
   const url = paramToQuery(BASE_URL, params);
   return fetch(url, {
     ...fetchOptions(),
@@ -12,7 +12,7 @@ export function increaseAsync(params = {}) {
 }
 
 export function decreaseAsync(params = {}) {
-  const BASE_URL = '/demoAsync/decrease';
+  const BASE_URL = '/api/decrease';
   const url = paramToQuery(BASE_URL, params);
   return fetch(url, {
     ...fetchOptions(),
