@@ -12,12 +12,11 @@ a scaffold with the following Libs
 4. Ant.Design v3
 5. Redux-Thunk
 6. Redux-Actions
-7. Koa2
-8. JWT
-9. sequelize
 
 Server
-1.express
+1. koa2
+2. jwt
+3. sequelize
 
 Dev
 1. webpack v4
